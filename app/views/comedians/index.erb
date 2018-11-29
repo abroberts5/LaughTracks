@@ -3,6 +3,7 @@
 <div id="comedians">
   <% @comedians.each do |comedian| %>
     <h3><%= comedian.name %></h3>
+    <img src=<%= comedian.image %> alt="comedian's picture">
     <p>City: <%= comedian.city %></p>
     <p>Age: <%= comedian.age %></p>
   <% end %>
