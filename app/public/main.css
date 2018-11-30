@@ -1,0 +1,40 @@
+body {
+  font-family: fantasy;
+}
+
+section {
+  font-family: sans-sans-serif;
+  font-family: cursive;
+  text-align: center;
+  font-size: smaller;
+  background-color: lightgrey;
+  width: 300px;
+  padding:10px;
+  margin: 60px;
+}
+
+h3 {
+  font-family: sans-sans-serif;
+  font-family: cursive;
+  text-align: center;
+}
+
+img {
+  object-fit: cover;
+  height: 200px;
+  width:  200px;
+  border: solid 2px black;
+}
+
+.s-image {
+  object-fit: cover;
+  height: 70px;
+  width:  70px;
+  border: solid 2px grey;
+  border-radius: 50%;
+}
+
+ul li {
+  font-style: italic;
+  text-align: justify;
+}

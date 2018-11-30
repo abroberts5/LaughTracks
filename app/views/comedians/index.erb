@@ -1,10 +1,37 @@
+<head>
+  <link rel="stylesheet" href="main.css">
+</head>
 <h1>My Favorite Comedians</h1>
-
-<div id="comedians">
-  <% @comedians.each do |comedian| %>
-    <h3><%= comedian.name %></h3>
-    <img src=<%= comedian.image %> alt="comedian's picture">
-    <p>City: <%= comedian.city %></p>
-    <p>Age: <%= comedian.age %></p>
-  <% end %>
-</div>
+<body>
+  <section>
+    <h3>Stats:</h3>
+    <p>average age: - <%= @average.round(2) %> % </p>
+    <p>average runtime: - <%= @runtime.round(2) %> % </p>
+    <p>unique cities: - </p>
+    <% @unique.each do |u| %>
+    <p><%= u.city %></p>
+    <% end %>
+  </section>
+  <div>
+    <% @comedians.each do |comedian| %>
+      <h2><%= comedian.name %></h2>
+      <img  src=<%= comedian.image %> alt="comedian's picture">
+      <p>City: <%= comedian.city %></p>
+      <p>Age: <%= comedian.age %></p>
+      <% comedian.specials.each do |special| %>
+      <img class="s-image" src=<%= special.image %> alt="picture of special">
+      <ul>
+        <li>special: <%= special.name %></li>
+        <li>year:    <%= special.year %></li>
+        <li>runtime: <%= special.runtime %></li>
+      </ul>
+      <% end %>
+      <p> ............................................................. </p>
+      <br><br>
+    <% end %>
+  </div>
+</body>
+<footer>
+  <br><br>
+  <p><small>this is not a real page &copy;</small></p>
+</footer>
