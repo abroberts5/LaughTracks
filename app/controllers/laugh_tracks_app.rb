@@ -1,9 +1,11 @@
 class LaughTracksApp < Sinatra::Base
   get '/comedians' do
-    @comedians = Comedian.all
-    @average = Comedian.average_age
-    @runtime = Special.average_runtime
-    @unique  = Comedian.unique_cities
+    @comedians     = Comedian.all
+    @average       = Comedian.average_age
+    @runtime       = Special.average_runtime
+    @unique        = Comedian.unique_cities
+    @specials_num  = Special.how_many
+    @total_specials= Special.total
     # require 'pry';binding.pry
     erb :"comedians/index"
   end
