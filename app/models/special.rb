@@ -4,6 +4,6 @@ class Special < ActiveRecord::Base
   validates :name, presence: true
 
   def self.average_runtime
-    average(:runtime)
+    average(:runtime).round
   end
 end

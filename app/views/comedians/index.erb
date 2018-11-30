@@ -5,8 +5,8 @@
 <body>
   <section>
     <h3>Stats:</h3>
-    <p>average age: - <%= @average.round(2) %> % </p>
-    <p>average runtime: - <%= @runtime.round(2) %> % </p>
+    <p>average age: - <%= @average %> % </p>
+    <p>average runtime: - <%= @runtime %> % </p>
     <p>unique cities: - </p>
     <% @unique.each do |u| %>
     <p><%= u.city %></p>

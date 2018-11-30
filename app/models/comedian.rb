@@ -5,7 +5,7 @@ class Comedian < ActiveRecord::Base
   validates :age, presence: true
 
   def self.average_age
-    average(:age)
+    average(:age).round
   end
 
   def self.unique_cities
