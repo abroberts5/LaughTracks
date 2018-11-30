@@ -6,4 +6,8 @@ class Special < ActiveRecord::Base
   def self.average_runtime
     average(:runtime).round
   end
+
+  def self.how_many
+    count(:name)
+  end
 end
