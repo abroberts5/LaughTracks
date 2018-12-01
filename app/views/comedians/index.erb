@@ -1,35 +1,38 @@
 <head>
   <link rel="stylesheet" href="main.css">
 </head>
-<h1>My Favorite Comedians</h1>
 <body>
-  <section>
-    <h3>Stats:</h3>
-    <p>average age: - <%= @average %> % </p>
-    <p>average runtime: - <%= @runtime %> % </p>
-    <p>unique cities: - </p>
-    <% @unique.each do |u| %>
-    <p><%= u.city %></p>
-    <% end %>
-  </section>
-  <div>
-    <% @comedians.each do |comedian| %>
-      <h2><%= comedian.name %></h2>
-      <img  src=<%= comedian.image %> alt="comedian's picture">
-      <p>City: <%= comedian.city %></p>
-      <p>Age: <%= comedian.age %></p>
-      <% comedian.specials.each do |special| %>
-      <img class="s-image" src=<%= special.image %> alt="picture of special">
-      <ul>
-        <li>special: <%= special.name %></li>
-        <li>year:    <%= special.year %></li>
-        <li>runtime: <%= special.runtime %></li>
-      </ul>
-      <p><small>specials count: #<%= %></small></p>
+  <h1 style="text-align:center;">My Favorite Comedians</h1>
+  <div class="grid">
+    <section>
+      <h3>Stats:</h3>
+      <p>average age: - <%= @average %> % </p>
+      <p>average runtime: - <%= @runtime %> % </p>
+      <p>total specials: - <%= @specials_num %></p>
+      <p>unique cities: ... </p>
+      <% @unique.each do |u| %>
+      <p><%= u.city %></p>
       <% end %>
-      <p> ............................................................. </p>
-      <br><br>
-    <% end %>
+    </section>
+    <div>
+      <% @comedians.each do |comedian| %>
+        <h2><%= comedian.name %></h2>
+        <img  src=<%= comedian.image %> alt="comedian's picture">
+        <p>City: <%= comedian.city %></p>
+        <p>Age: <%= comedian.age %></p>
+        <% comedian.specials.each do |special| %>
+        <img class="s-image" src=<%= special.image %> alt="picture of special">
+        <ul>
+          <li>special: <%= special.name %></li>
+          <li>year:    <%= special.year %></li>
+          <li>runtime: <%= special.runtime %></li>
+        </ul>
+        <% end %>
+        <p><small>specials count: #<%= comedian.total_specials %></small></p>
+        <p> ............................................................. </p>
+        <br><br>
+      <% end %>
+    </div>
   </div>
 </body>
 <footer>

@@ -5,8 +5,6 @@ class LaughTracksApp < Sinatra::Base
     @runtime       = Special.average_runtime
     @unique        = Comedian.unique_cities
     @specials_num  = Special.how_many
-    @total_specials= Special.total
-    # require 'pry';binding.pry
     erb :"comedians/index"
   end
 

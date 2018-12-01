@@ -11,4 +11,8 @@ class Comedian < ActiveRecord::Base
   def self.unique_cities
     distinct(:city)
   end
+
+  def total_specials
+    self.specials.count
+  end
 end
