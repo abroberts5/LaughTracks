@@ -13,7 +13,7 @@ class LaughTracksApp < Sinatra::Base
   end
 # form parameter
   post '/comedians' do
-    Comedian.create(params[:song])
+    Comedian.create(params[:comedian])
     redirect "/comedians"
   end
 # dynamic parameter v
