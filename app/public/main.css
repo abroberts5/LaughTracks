@@ -1,21 +1,51 @@
 body {
   font-family: fantasy;
+  background: url("/images/open_mic.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto
+  auto auto auto auto auto;
+  background-color: rgb(91, 59, 59);
+  padding-right: 700px;
+  margin: auto;
+  color: black;
+  }
+
+.grid-container>p {
+  background-color: grey;
+  text-align: center;
+  height: 20px;
+  width: 120px;
+  padding: 10px 0;
+  font-size: 10px;
+  margin: 10px
+}
+
+h1 {
+  color: black;
 }
 
 section {
   font-family: sans-sans-serif;
   font-family: cursive;
-  text-align: center;
+  text-align: left;
   font-size: smaller;
   background-color: lightgrey;
-
+  width: 300px;
+  padding:10px;
+  margin: 60px;
 }
 
 .grid {
   display: grid;
+  grid-template-areas: 'header header header';
   justify-content: space-evenly;
   align-content: center;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: auto auto auto;
   grid-column-gap: 0px;
   grid-row-gap: 10px;
 }
@@ -44,4 +74,8 @@ img {
 ul li {
   font-style: italic;
   text-align: justify;
+}
+
+footer {
+  text-align: center;
 }
