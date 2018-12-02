@@ -1,40 +1,42 @@
-<head>
-  <link rel="stylesheet" href="main.css">
-</head>
-<body>
-  <h1 style="text-align:center;">My Favorite Comedians</h1>
-  <section class="grid-container">
-    <h3>Stats:</h3>
-    <p style="font-weight: 900;">average age: - <%= @average %> % </p>
-    <p style="font-weight: 900;">average runtime: - <%= @runtime %> % </p>
-    <p style="font-weight: 900;">total specials: - <%= @specials_num %></p>
-    <p style="font-weight: 900;">unique cities: ... </p>
-    <% @unique.each do |u| %>
-    <p><%= u.city %></p>
-    <% end %>
-  </section>
-  <div class="grid">
-    <div>
-      <% @comedians.each do |comedian| %>
-        <h2><%= comedian.name %></h2>
-        <img  src=<%= comedian.image %> alt="comedian's picture">
-        <p>City: <%= comedian.city %></p>
-        <p>Age: <%= comedian.age %></p>
-        <% comedian.specials.each do |special| %>
-        <img class="s-image" src=<%= special.image %> alt="picture of special">
-        <ul>
-          <li>special: <%= special.name %></li>
-          <li>year:    <%= special.year %></li>
-          <li>runtime: <%= special.runtime %> min</li>
-        </ul>
-        <% end %>
-        <p><small>specials count: #<%= comedian.total_specials %></small></p>
-        <p> ............................................................. </p>
-        <br><br>
+<html>
+  <head>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <h1 style="text-align:center;">My Favorite Comedians</h1>
+    <section class="grid-container">
+      <h3>Stats:</h3>
+      <p style="font-weight: 900;">average age: - <%= @average %> % </p>
+      <p style="font-weight: 900;">average runtime: - <%= @runtime %> % </p>
+      <p style="font-weight: 900;">total specials: - <%= @specials_num %></p>
+      <p style="font-weight: 900;">unique cities: ... </p>
+      <% @unique.each do |u| %>
+      <p><%= u.city %></p>
       <% end %>
+    </section>
+    <div class="grid">
+      <div>
+        <% @comedians.each do |comedian| %>
+          <h2><%= comedian.name %></h2>
+          <img  src=<%= comedian.image %> alt="comedian's picture">
+          <p>City: <%= comedian.city %></p>
+          <p>Age: <%= comedian.age %></p>
+          <% comedian.specials.each do |special| %>
+          <img class="s-image" src=<%= special.image %> alt="picture of special">
+          <ul>
+            <li>special: <%= special.name %></li>
+            <li>year:    <%= special.year %></li>
+            <li>runtime: <%= special.runtime %> min</li>
+          </ul>
+          <% end %>
+          <p><small>specials count: #<%= comedian.total_specials %></small></p>
+          <p> ............................................................. </p>
+          <br><br>
+        <% end %>
+      </div>
     </div>
-  </div>
-</body>
-<footer>
-  <p><small>this is a sample comic page :P &copy;</small></p>
-</footer>
+  </body>
+  <footer>
+    <p><small>this is a sample comic page :P &copy;</small></p>
+  </footer>
+</html
