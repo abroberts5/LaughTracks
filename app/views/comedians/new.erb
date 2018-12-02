@@ -1,10 +1,15 @@
-<form class="new-comedian" action="/comedians" method=POST>
-  <h4>What's the Name:</h4>
-  <input type="text" name="comedian[name]" placeholder="Name">
-  <h4>Where were they born:</h4>
-  <input type="text" name="comedian[city]" placeholder="City">
-  <h4>Age # - (old fart? or Naw?):</h4>
-  <input type="text" name="comedian[age]" placeholder="Age">
-  <h5>Then this button...</h5>
-  <input type="submit" value="Submit">
-</form>
+<html style="background:url(/images/open_mic.jpg);">
+  <form class="new-comedian" action="/comedians" method=POST>
+    <br>
+    <h2 style="color: white;">Let's Add a new commedian</h2><br>
+    <h3 style="color: white;">What's the Name:</h3>
+    <input type="text" name="comedian[name]" placeholder="Name">
+    <h3 style="color: white;">Where were they born:</h3>
+    <input type="text" name="comedian[city]" placeholder="City">
+    <h3 style="color: white;">Age # - (old fart? or Naw?):</h3>
+    <input type="text" name="comedian[age]" placeholder="Age">
+    <h4 style="color: white;">Then this button...</h4>
+    <input type="submit" value="Submit">
+    <input type="hidden" name="comedian[image]" value="/images/cat_lean.jpg">
+  </form>
+</html>
